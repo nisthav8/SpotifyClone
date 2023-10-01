@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="brand"><img src="logo.png" alt="Spotify" width="100">Spotify</li>
+      <li>Home</li>
+      <li>About</li>
+    </ul>
+  </nav>
+  <div class="container">
+  
+    <div class="songlist"><h1>Best of Arijit Singh</h1>
+      <div class="songitemcontainer">
+        <div class="songitem">
+          <img src="first.jpg" alt="1" width="60px">
+          <span class="songname">Tum hi ho</span>
+          <span class="songlistplay"><span id="one" class="timestamp">04:22</span><i id="0"class="fa-solid  songitemplay fa-play-circle"></i>
+        </div>
+        <div class="songitem">
+          <img src="second.jpg" alt="1" width="60px">
+          <span class="songname">Heeriye</span>
+          <span class="songlistplay"><span id="one" class="timestamp">04:22</span><i id="1" class="fa-solid songitemplay fa-play-circle"></i>
+        </div>
+        <div class="songitem">
+          <img src="third.jpg" alt="1" width="60px">
+          <span class="songname">Chaleya</span>
+          <span class="songlistplay"><span id="one" class="timestamp">04:22</span><i id="2" class="fa-solid songitemplay fa-play-circle"></i>
+        </div>
+        <div class="songitem">
+          <img src="fourth.jpg" alt="1"width="60px">
+          <span class="songname">Tere hawale</span>
+          <span class="songlistplay"><span id="one" class="timestamp">04:22</span><i id="3" class="fa-solid songitemplay fa-play-circle"></i>
+        </div>
+        <div class="songitem">
+          <img src="fifth.jpg" alt="1" width="60px">
+          <span class="songname">Tu mera koi na</span>
+          <span class="songlistplay"><span id="one" class="timestamp">04:22</span><i id="4" class="fa-solid songitemplay fa-play-circle"></i>
+        </div>
+
+      </div>
+    </div>
+    <div class="songbanner"></div>
+
+  </div>
+  <div class="bottom">
+    <input type="range" name="range" id="myprogressbar" value="0" min="0" max="100">
+    <div class="icons"><i class="fa-solid fa-2x fa-step-backward" id="previous"></i>
+      <i class="fa-solid fa-2x fa-play-circle" id="masterplay"></i>
+      <i class="fa-solid fa-2x fa-step-forward" id="next"></i>
+    </div>
+    <div class="songinfo"><img src="playing.gif" id="gif"><span id="mastersongname">Tum hi ho</span></div>
+  </div>
+  <script src="https://kit.fontawesome.com/ab5101309a.js" crossorigin="anonymous"></script>
+  <script  src="script.js"></script>
+</body>
+</html>
