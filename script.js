@@ -3,6 +3,11 @@ console.log("spotify");
 let songIndex=0;
 let audioElement = new Audio("1.mp3");
 let masterPlay = document.getElementById('masterplay');
+let one = document.getElementById("0");
+let two = document.getElementById("1");
+let three = document.getElementById("2");
+let four = document.getElementById("3");
+let five = document.getElementById("4");
 let myProgressBar= document.getElementById('myprogressbar');
 let gif=document.getElementById('gif');
 let masterSongName=document.getElementById('mastersongname');
@@ -92,18 +97,139 @@ songIndex+=1;
  masterSongName.innerText= songs[songIndex].songName;
  audioElement.currentTime = 0;
  audioElement.play();
+
+   if (songIndex == 0) {
+     one.classList.remove("fa-play-circle");
+     one.classList.add("fa-pause-circle");
+     two.classList.remove("fa-pause-circle");
+     two.classList.add("fa-play-circle");
+     three.classList.remove("fa-pause-circle");
+     three.classList.add("fa-play-circle");
+     four.classList.remove("fa-pause-circle");
+     four.classList.add("fa-play-circle");
+     five.classList.remove("fa-pause-circle");
+     five.classList.add("fa-play-circle");
+   } else if (songIndex == 1) {
+       one.classList.remove("fa-pause-circle");
+       one.classList.add("fa-play-circle");
+     two.classList.remove("fa-play-circle");
+     two.classList.add("fa-pause-circle");
+    
+       three.classList.remove("fa-pause-circle");
+       three.classList.add("fa-play-circle");
+       four.classList.remove("fa-pause-circle");
+       four.classList.add("fa-play-circle");
+       five.classList.remove("fa-pause-circle");
+       five.classList.add("fa-play-circle");
+   } else if (songIndex == 2) {
+     three.classList.remove("fa-play-circle");
+     three.classList.add("fa-pause-circle");
+       two.classList.remove("fa-pause-circle");
+       two.classList.add("fa-play-circle");
+       one.classList.remove("fa-pause-circle");
+       one.classList.add("fa-play-circle");
+       four.classList.remove("fa-pause-circle");
+       four.classList.add("fa-play-circle");
+       five.classList.remove("fa-pause-circle");
+       five.classList.add("fa-play-circle");
+   } else if (songIndex == 3) {
+     four.classList.remove("fa-play-circle");
+     four.classList.add("fa-pause-circle");
+       two.classList.remove("fa-pause-circle");
+       two.classList.add("fa-play-circle");
+       three.classList.remove("fa-pause-circle");
+       three.classList.add("fa-play-circle");
+       one.classList.remove("fa-pause-circle");
+       one.classList.add("fa-play-circle");
+       five.classList.remove("fa-pause-circle");
+       five.classList.add("fa-play-circle");
+   } else {
+     five.classList.remove("fa-play-circle");
+     five.classList.add("fa-pause-circle");
+       two.classList.remove("fa-pause-circle");
+       two.classList.add("fa-play-circle");
+       three.classList.remove("fa-pause-circle");
+       three.classList.add("fa-play-circle");
+       four.classList.remove("fa-pause-circle");
+       four.classList.add("fa-play-circle");
+       one.classList.remove("fa-pause-circle");
+       one.classList.add("fa-play-circle");
+   }
+//  for(let i=0;i<=4;i++)
+//  if(i!=songIndex)
+//  i.classList.remove("fa-play-circle");
+
+
  masterPlay.classList.remove("fa-play-circle");
  masterPlay.classList.add("fa-pause-circle");
 })
 
 document.getElementById('previous').addEventListener("click", () => {
-  if(songIndex<0) songIndex = 0;
+  if(songIndex<0) songIndex = 4;
   else songIndex -= 1;
 
   audioElement.src = `${songIndex + 1}.mp3`;
   masterSongName.innerText = songs[songIndex].songName;
   audioElement.currentTime = 0;
   audioElement.play();
+  
+   if (songIndex == 0) {
+     one.classList.remove("fa-play-circle");
+     one.classList.add("fa-pause-circle");
+     two.classList.remove("fa-pause-circle");
+     two.classList.add("fa-play-circle");
+     three.classList.remove("fa-pause-circle");
+     three.classList.add("fa-play-circle");
+     four.classList.remove("fa-pause-circle");
+     four.classList.add("fa-play-circle");
+     five.classList.remove("fa-pause-circle");
+     five.classList.add("fa-play-circle");
+   } else if (songIndex == 1) {
+     one.classList.remove("fa-pause-circle");
+     one.classList.add("fa-play-circle");
+     two.classList.remove("fa-play-circle");
+     two.classList.add("fa-pause-circle");
+
+     three.classList.remove("fa-pause-circle");
+     three.classList.add("fa-play-circle");
+     four.classList.remove("fa-pause-circle");
+     four.classList.add("fa-play-circle");
+     five.classList.remove("fa-pause-circle");
+     five.classList.add("fa-play-circle");
+   } else if (songIndex == 2) {
+     three.classList.remove("fa-play-circle");
+     three.classList.add("fa-pause-circle");
+     two.classList.remove("fa-pause-circle");
+     two.classList.add("fa-play-circle");
+     one.classList.remove("fa-pause-circle");
+     one.classList.add("fa-play-circle");
+     four.classList.remove("fa-pause-circle");
+     four.classList.add("fa-play-circle");
+     five.classList.remove("fa-pause-circle");
+     five.classList.add("fa-play-circle");
+   } else if (songIndex == 3) {
+     four.classList.remove("fa-play-circle");
+     four.classList.add("fa-pause-circle");
+     two.classList.remove("fa-pause-circle");
+     two.classList.add("fa-play-circle");
+     three.classList.remove("fa-pause-circle");
+     three.classList.add("fa-play-circle");
+     one.classList.remove("fa-pause-circle");
+     one.classList.add("fa-play-circle");
+     five.classList.remove("fa-pause-circle");
+     five.classList.add("fa-play-circle");
+   } else {
+     five.classList.remove("fa-play-circle");
+     five.classList.add("fa-pause-circle");
+     two.classList.remove("fa-pause-circle");
+     two.classList.add("fa-play-circle");
+     three.classList.remove("fa-pause-circle");
+     three.classList.add("fa-play-circle");
+     four.classList.remove("fa-pause-circle");
+     four.classList.add("fa-play-circle");
+     one.classList.remove("fa-pause-circle");
+     one.classList.add("fa-play-circle");
+   }
   masterPlay.classList.remove("fa-play-circle");
   masterPlay.classList.add("fa-pause-circle");
 });
