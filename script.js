@@ -32,6 +32,7 @@ songItems.forEach((element,i)=>{
 masterPlay.addEventListener('click',()=>{
    if(audioElement.paused || audioElement.currentTime<=0){
      audioElement.play();
+   
      masterPlay.classList.remove('fa-play-circle');
      masterPlay.classList.add('fa-pause-circle');
      gif.style.opacity=1;
@@ -40,6 +41,22 @@ masterPlay.addEventListener('click',()=>{
       audioElement.pause();
         masterPlay.classList.remove("fa-pause-circle");
         masterPlay.classList.add("fa-play-circle");
+          if (songIndex == 0) {
+            one.classList.remove("fa-pause-circle");
+            one.classList.add("fa-play-circle");
+          } else if (songIndex == 1) {
+            two.classList.remove("fa-pause-circle");
+            two.classList.add("fa-play-circle");
+          } else if (songIndex == 2) {
+            three.classList.remove("fa-pause-circle");
+            three.classList.add("fa-play-circle");
+          } else if (songIndex == 3) {
+            four.classList.remove("fa-pause-circle");
+            four.classList.add("fa-play-circle");
+          } else {
+            five.classList.remove("fa-pause-circle");
+            five.classList.add("fa-play-circle");
+          }
         gif.style.opacity = 0;
    }
 });
@@ -59,18 +76,20 @@ myProgressBar.addEventListener('change',()=>{
    audioElement.currentTime=myProgressBar.value*audioElement.duration/100;
 
 })
-const makeallplay = () =>{
+const makeallplay = (songIndex) =>{
   
 Array.from(document.getElementsByClassName('songitemplay')).forEach((element)=>{
   element.classList.remove("fa-pause-circle");
              element.classList.add('fa-play-circle');
+            
 })
+
 }
 
 Array.from(document.getElementsByClassName('songitemplay')).forEach((element)=>{
 
    element.addEventListener('click',(e)=>{
-    makeallplay();
+    makeallplay(songIndex);
     
     songIndex=parseInt(e.target.id);
        e.target.classList.remove('fa-play-circle');
@@ -83,6 +102,7 @@ Array.from(document.getElementsByClassName('songitemplay')).forEach((element)=>{
        gif.style.opacity = 1;
        masterPlay.classList.remove("fa-play-circle");
        masterPlay.classList.add("fa-pause-circle");
+      
    })
 
 }
